@@ -5,14 +5,21 @@
 
 .header {
     text-decoration: underline;
-
+    strong;
 }
 
-body {
-
-    background-image: url("../img/straws.jpg");
+body {  background-image: url("../img/straws.jpg");
 }
 
 .body {
     font-family: "Damascus", cursive;
+}
+
+#table {
+    border-style: dashed;
+
+}
+
+.table {
+    border-style: dotted;
 }
