@@ -1,4 +1,18 @@
 .fancy-header {
     color: purple;
+    text-align: center;
+}
+
+.header {
     text-decoration: underline;
+
+}
+
+body {
+
+    background-image: url("../img/straws.jpg");
+}
+
+.body {
+    font-family: "Damascus", cursive;
 }
