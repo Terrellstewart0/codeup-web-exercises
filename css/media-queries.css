@@ -1,0 +1,53 @@
+/* Small devices (tablets, 768px and up) */
+@media screen and (max-width:768px) {
+    body {
+        background-color: dimgray;
+    }
+
+    li {
+        float: left;
+        margin: 10px;
+        clear: both;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width:769px) {
+
+body {
+    background-color: lightcoral;
+
+}
+
+h1 {
+    color: blueviolet;
+}
+
+li {
+    margin: 10px;
+    float: right;
+}
+
+img {
+
+    width: 100%;
+    clear: both;}
+
+.main {
+    float: left;
+    width: 30%;
+}
+
+.sub-section {
+    float: right;
+    width: 30%;
+}
+
+
+}
+
