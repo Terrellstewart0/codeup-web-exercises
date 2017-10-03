@@ -3,8 +3,10 @@ body {
     font-family:cursive, fantasy;
 }
 
-h2 {
+h1 {
     color: royalblue;
+    text-align: center;
+    box-shadow: darkslategray;
 }
 
 h3 {
