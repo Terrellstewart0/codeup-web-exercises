@@ -40,14 +40,29 @@ img {
 
 .main {
     float: left;
-    width: 30%;
 }
 
 .sub-section {
     float: right;
-    width: 30%;
 }
 
 
 }
+.row {
+    width:100%;
+    background-color: goldenrod;
+}
 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+.column2 {
+    width: 50%;
+    background-color: peru;
+    box-sizing: border-box;
+    float: left;
+    border-style: solid;
+    border-color: black;
+}
