@@ -7,25 +7,94 @@
 <body>
 
 
+<script>
+
+
+
+/*
+
+    var pizzaPreference = prompt("What kind of pizza do you like?");
+
+    switch(pizzaPreference) {
+        case "pineapple and hot sauce":
+            alert("What a coincidence, that's my favorite!");
+            break;
+        case "cheese":
+            alert("Just plain cheese? Okay...");
+            break;
+        default:
+            alert(pizzaPreference + " isn't my favorite, but let's order some!");
+            break;
+    }
+
+*/
+
+
+/*
+    var confirmed = confirm('Do You Want to Enter A Number');
+    console.log(confirmed);
+
+    if (confirmed == true) {
+        var prompted = prompt("Please Enter A Number!")
+    }
+
+
+       alert( "That number plus 100 is " + (Number(prompted) + 100) + "!");
 
 
 
 
+    if (isNaN()) {
+           alert("Sorry that isnt a number")
+
+
+
+    }
+
+*/
+
+  function calculateTotal(luckyNumber, total) {
+
+      var discountPercentage, finalOutput
+
+
+      switch(luckyNumber) {
+
+
+          case 0:
+              discountPercentage = 0;
+              break;
+          case 1:
+              discountPercentage = .1
+              break;
+          case 2:
+              discountPercentage = .25
+              break;
+          case 3:
+              discountPercentage = .35
+              break;
+          case 4:
+              discountPercentage = .5
+              break;
+          case 5:
+              discountPercentage = 1
+              break;
+
+      }
+
+      finalOutput = total - (total * discountPercentage)
+
+      return finalOutput;
+
+  }
+
+  console.log(calculateTotal(0, 100))
+console.log(calculateTotal(4, 100))
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+</script>
 
 
 
