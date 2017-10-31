@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery_work</title>
+</head>
+<body>
+<script src="js/jquery-2.2.4.js" ></script>
+
+        <script>
+    $(document).ready(function () {
+
+        var global = {
+
+            konami: function() {
+                var konamikeys = [38,38,40,40,37,39,37,39,66,65],
+                    started = false,
+                    count = 0;
+
+                $(document).keydown(function(e){
+                    var reset = function() {
+                        started = false;
+                        count = 0;
+                        return;
+                    };
+
+                    key = e.keyCode;
+
+
+                    if(!started){
+                        if(key == 38){
+                            started = true;
+                        }
+                    }
+
+
+                    if (started){
+
+                        if (konamikeys[count] == key){
+                            count++;
+                        } else {
+                            // Incorrect key, restart.
+                            reset();
+                        }
+                        if (count == 10){
+                            // Success!
+                            alert('Konami code entered!');
+                            $('body').css('<img src=dt')
+                            reset();
+                        }
+                    } else {
+                        reset();
+                    }
+                });
+            }
+        }
+
+        global.konami();
+
+    });
+
+    </script>
+
+    <h1 id="the-head">And then I said let there be funk. and it was funky!</h1>
+
+    <p id="tell-me">Like brother you cant even begin to understand the funk that took place this day. Truly humanity's greatest musical talents had been achieved </p>
+
+
+    <div id="this has stuff">
+        <ul>
+            <li class="listitem">They had the highest highs</li>
+            <li class="listitem">They had the lowest lows</li>
+            <li class="listitem"> and most importantly.... they had</li>
+            <li><h4>THE FUNK</h4></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
