@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery_faq</title>
+</head>
+<body>
+<script src="js/jquery-2.2.4.js" ></script>
+
+
+<div>
+    Would you like to sign up for our newsletter?
+</div>
+<span>X</span>
+
+    <h1>Info about national parks!</h1>
+
+    <dl>
+        <dt>Sequoia National Park</dt>
+            <dd class="invisible">- Is home to General Sherman, the largest living single-stem tree in the world.
+                The tree is approximately 275ft (84m) tall and weighs approximately 1,900 metric tonnes.</dd>
+
+        <dt>Denali National Park</dt>
+            <dd class="invisible">- Is home to the highest point in North America, Mount McKinley (aka Denali) standing at 20,320ft</dd>
+
+        <dt>Mammoth Cave National Park</dt>
+            <dd class="invisible">- Has the longest cave system in the world</dd>
+    </dl>
+
+    <h4><a id="clickHere">Click to learn more!</a></h4>
+    <button id="C">Click to learn more!</button>
+
+
+    <ul> <h3>Redwood</h3>
+        <li>it</li>
+        <li>is a</li>
+        <li class="chicken"> park!</li>
+    </ul>
+
+    <ul><h3>Big Bend</h3>
+        <li>look at</li>
+        <li class="chicken">that bird!</li>
+    </ul>
+
+<button id="mash">Click for stuff.</button>
+
+
+
+<script>
+    $(document).ready(function (){
+
+        $('.invisible').css('display', 'none');
+
+
+
+
+
+        $('#clickHere').click(function(event) {
+            event.preventDefault();
+            $("dd").toggleClass('invisible');
+        });
+
+
+        var highlightBtn = $('#mash');
+
+        highlightBtn.click(function(){
+
+
+            $('ul').each(function (index, element) {
+                $(element).children().last().css("background-color", "yellow")
+            })
+
+        });
+
+
+        $('h3').click(function () {
+
+        });
+
+
+
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
