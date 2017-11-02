@@ -9,9 +9,9 @@
 
 
 <div>
-    Would you like to sign up for our newsletter?
+    Would you like to sign up for our newsletter? <span>X</span>
 </div>
-<span>X</span>
+<h1 id="register">Please Sign Up!</h1>
 
     <h1>Info about national parks!</h1>
 
@@ -73,13 +73,18 @@
         });
 
 
+        $('span').click(function () {
+        $(this).parent().hide();
+        })
+
+
+        $('ul').hide();
         $('h3').click(function () {
-
-        });
-
-
+            $(this).next().slideToggle();
+        })
 
 
+        $('#register').hide().delay(2000).fadeIn();
 
 
 
