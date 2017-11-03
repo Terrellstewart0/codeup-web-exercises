@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather map</title>
+</head>
+<body>
+<h1>Weather map Project</h1>
+
+
+
+
+<script src="js/jquery-2.2.4.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        "use striced"
+
+       var start = $.get("http://api.openweathermap.org/data/2.5/forecast?lat=29.423017&lon=-98.48527", {
+            APPID: "b74f84c8a208935dad0559b2dbeb40a6",
+        });
+        start.fail(function (jqXhr, status, error) {
+            alert("There was an error! Check the console for details");
+            console.log("Response status: " + status);
+            console.log("Error object: " + error);
+        });
+       start.done(function(data) {
+
+           console.log(data);
+       });
+
+       (function (weather) {
+           addRowToTable(weather );
+       });
+
+
+
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<h1>Blog</h1>
+<div id="posts">
+
+
+</div>
+<button id="btn">click to add!</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+
+//$(function () {
+//
+//    var $posts = $('.posts');
+//
+//    $.ajax({
+//        type: 'GET',
+//        url: 'data/blog.json',
+//        success: function(posts) {
+//           $.each(posts, function (i, post) {
+//              $posts.append
+//           })
+//        }
+//
+//    })
+//
+//
+//
+//})
+
+//(function() {
+//    "use strict";
+//    var request =  $.get("data/blog.json");
+//
+//
+//    request.fail(function (jqXhr, status, error) {
+//        alert("There was an error! Check the console for details");
+//        console.log("Response status: " + status);
+//        console.log("Error object: " + error);
+//    })
+//
+//    request.done(function(data, status){
+//
+//        console.log(data);
+////
+//        data.forEach(function (post) {
+//            addRowToTable(post);
+//        });
+////
+//
+//        function addRowToTable(post) {
+////
+//            var htmlString = "";
+//
+//            htmlString += "<div>" + post.title + "</div>";
+//            htmlString += "<div>" + post.content + "</div>";
+//            htmlString += "<div>" + post.categories + "</div>";
+//            htmlString += "<div>" + post.date + "</div>"
+//
+//            $("#posts").append(htmlString);
+//
+//        }
+//    });
+
+
+
+//
+//
+//
+//
+//
+//
+//    $("body").css("background-color", "#6796e5")
+//    $("body").css("color", "#ffffff")
+//    $("post.title").css("font-size", "200%")
+//})();
+
+
+
+
+
+
+
+    $(document).ready(function () {
+        "use strict";
+
+        function loadPosts() {
+            $.get("data/blog.json").done(function (data) {
+               buildHTML(data);
+            })
+                .fail(function () {
+                    console.log("failed request");
+
+                })
+
+            function buildHTML(posts) {
+                var outputSting = "test";
+
+                outputSting += "<div class='posts'>";
+
+//                $('#posts').html(outputSting)
+            }
+        }
+
+        loadPosts();
+        $("#btn").click(loadPosts());
+
+
+
+
+
+
+
+
+
+
+    })
+
+
+
+
+</script>
+
+
+</body>
+</html>
